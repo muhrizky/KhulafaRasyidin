@@ -1,6 +1,8 @@
 package id.ac.undip.ce.student.muhammadrizqi.khulafarasyidin;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,6 +21,7 @@ public class CardViewKhulafaAdapter extends RecyclerView.Adapter<CardViewKhulafa
 
     private ArrayList<Khulafa>listKhulafa;
     private Context context;
+    private Activity activity;
 
     public CardViewKhulafaAdapter(Context context) {
         this.context = context;
@@ -41,18 +44,12 @@ public class CardViewKhulafaAdapter extends RecyclerView.Adapter<CardViewKhulafa
 
     @Override
     public void onBindViewHolder(CardViewHolder holder, int position) {
-        Khulafa k = getListKhulafa().get(position);
+        final Khulafa k = getListKhulafa().get(position);
         Glide.with(context).load(k.getPhoto()).override(350,550).into(holder.imgPhoto);
         holder.tvname.setText(k.getName());
         holder.tvremarks.setText(k.getRemarks());
 
-        holder.btnFavorite.setOnClickListener(new CustomOnItemClickListener(position, new CustomOnItemClickListener.OnItemClickCallback() {
-            @Override
-            public void onItemClicked(View view, int position) {
-                Toast.makeText(context, "FAvorite"+getListKhulafa().get(position).getName(),Toast.LENGTH_SHORT).show();
 
-            }
-        }));
 
         holder.btnsahre.setOnClickListener(new CustomOnItemClickListener(position, new CustomOnItemClickListener.OnItemClickCallback() {
             @Override
@@ -69,10 +66,14 @@ public class CardViewKhulafaAdapter extends RecyclerView.Adapter<CardViewKhulafa
         return getListKhulafa().size();
     }
 
+    public void startactivity(Intent intent){
+
+    }
+
     public class CardViewHolder extends RecyclerView.ViewHolder {
          ImageView imgPhoto;
          TextView tvname, tvremarks;
-         Button btnFavorite, btnsahre;
+         Button btndetail, btnsahre;
 
         public CardViewHolder(View itemView) {
             super(itemView);
@@ -80,7 +81,7 @@ public class CardViewKhulafaAdapter extends RecyclerView.Adapter<CardViewKhulafa
             tvname = (TextView)itemView.findViewById(R.id.tv_item_name);
             tvremarks = (TextView)itemView.findViewById(R.id.tv_item_remarks);
             btnsahre = (Button)itemView.findViewById(R.id.btn_set_share);
-            btnFavorite = (Button)itemView.findViewById(R.id.btn_set_favorite);
+            btndetail = (Button)itemView.findViewById(R.id.btn_set_detail);
 
         }
     }

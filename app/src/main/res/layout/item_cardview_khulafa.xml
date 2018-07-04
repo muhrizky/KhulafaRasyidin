@@ -53,10 +53,10 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_set_favorite"
+                android:id="@+id/btn_set_detail"
                 android:textSize="9sp"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:text="Favorite"
+                android:text="Detail"
                 android:layout_weight="1"/>
             <Button
                 android:layout_width="match_parent"
