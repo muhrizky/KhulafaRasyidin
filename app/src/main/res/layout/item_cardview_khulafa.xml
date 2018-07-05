@@ -21,27 +21,17 @@
             android:id="@+id/img_item_photo"
             android:layout_marginBottom="4dp"/>
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/Text1"
             android:layout_toRightOf="@id/img_item_photo"
             android:id="@+id/tv_item_name"
-            android:textSize="16sp"
-            android:textStyle="bold"
             android:text="Name"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginTop="16dp" />
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/Text1"
             android:layout_below="@id/tv_item_name"
             android:layout_toRightOf="@id/img_item_photo"
             android:id="@+id/tv_item_remarks"
-            android:text="Remarks"
-            android:layout_marginBottom="8dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"/>
+            android:text="Remarks" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_set_detail"
-                android:textSize="9sp"
+                android:textSize="11sp"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:text="Detail"
                 android:layout_weight="1"/>
@@ -63,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_set_share"
                 android:textSize="11sp"
+
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:text="Share"
                 android:layout_weight="1"/>
