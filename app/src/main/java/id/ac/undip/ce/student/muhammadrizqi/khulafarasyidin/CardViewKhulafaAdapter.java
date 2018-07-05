@@ -48,6 +48,7 @@ public class CardViewKhulafaAdapter extends RecyclerView.Adapter<CardViewKhulafa
         Glide.with(context).load(k.getPhoto()).override(350,550).into(holder.imgPhoto);
         holder.tvname.setText(k.getName());
         holder.tvremarks.setText(k.getRemarks());
+        holder.khulafa = k;
 
 
 
@@ -70,10 +71,11 @@ public class CardViewKhulafaAdapter extends RecyclerView.Adapter<CardViewKhulafa
 
     }
 
-    public class CardViewHolder extends RecyclerView.ViewHolder {
+    public class CardViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
          ImageView imgPhoto;
          TextView tvname, tvremarks;
          Button btndetail, btnsahre;
+         Khulafa khulafa;
 
         public CardViewHolder(View itemView) {
             super(itemView);
@@ -82,7 +84,14 @@ public class CardViewKhulafaAdapter extends RecyclerView.Adapter<CardViewKhulafa
             tvremarks = (TextView)itemView.findViewById(R.id.tv_item_remarks);
             btnsahre = (Button)itemView.findViewById(R.id.btn_set_share);
             btndetail = (Button)itemView.findViewById(R.id.btn_set_detail);
+            btndetail.setOnClickListener(this);
+        }
 
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(context, DetailKhulafaActivity.class);
+            intent.putExtra("key", khulafa);
+            context.startActivity(intent);
         }
     }
 }

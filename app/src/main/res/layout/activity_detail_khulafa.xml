@@ -13,7 +13,6 @@
         android:orientation="vertical">
 
 
-
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -83,7 +82,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="14sp"
-                    android:id="@+id/content_wafat"
                     android:layout_marginRight="16dp"
                     android:text="Lahir"/>
                 <TextView
@@ -110,6 +108,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
+                    android:id="@+id/content_wafat"
                     android:layout_weight="1"
                     android:text="Conten Wafat"
                     android:textColor="@color/black"/>

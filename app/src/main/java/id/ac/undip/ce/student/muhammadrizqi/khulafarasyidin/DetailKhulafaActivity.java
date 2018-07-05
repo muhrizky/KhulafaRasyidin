@@ -2,6 +2,8 @@ package id.ac.undip.ce.student.muhammadrizqi.khulafarasyidin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +15,7 @@ public class DetailKhulafaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_khulafa);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Khulafa khulafaditerima = getIntent().getParcelableExtra("key");
 
         ImageView gamabar = (ImageView)findViewById(R.id.img_item_photo);
@@ -29,5 +32,9 @@ public class DetailKhulafaActivity extends AppCompatActivity {
         lahir.setText(khulafaditerima.getLahir());
         wafat.setText(khulafaditerima.getWafat());
 
+        Log.i("photo", khulafaditerima.getPhoto());
+        Log.i("deskripsi", khulafaditerima.getDeskripsi());
     }
+
+
 }

@@ -32,18 +32,6 @@ public class MainActivity extends AppCompatActivity {
         cardViewPresidentAdapter.setListKhulafa(list);
         rvCategory.setAdapter(cardViewPresidentAdapter);
 
-        ItemClickSupport.addTo(rvCategory).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
-            @Override
-            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                if(v.getId() == R.id.btn_set_detail) {
-                    showSelectedKhulafa(list.get(position));
-                }
-            }
-        });
     }
-    private void showSelectedKhulafa(Khulafa khulafa){
-        Intent intent = new Intent(this, DetailKhulafaActivity.class);
-        intent.putExtra("key", khulafa);
-        startActivity(intent);
-    }
+
 }

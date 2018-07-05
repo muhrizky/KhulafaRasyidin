@@ -88,8 +88,8 @@ public class Khulafa implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(this.name);
         parcel.writeString(this.remarks);
-        parcel.writeString(this.deskripsi);
         parcel.writeString(this.photo);
+        parcel.writeString(this.deskripsi);
         parcel.writeString(this.lahir);
         parcel.writeString(this.wafat);
     }
