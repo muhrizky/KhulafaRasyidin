@@ -14,5 +14,4 @@ Aplikasi ini juga ditunjukan untuk final submission pada Kelas Belajar Membuat A
 
 Informasi pada aplikasi ini bersumber dari wikipedia indonesia https://id.wikipedia.org
 
-# Sertifikat Kelulusan
 ![alt text](https://raw.githubusercontent.com/muhrizky/KhulafaRasyidin/master/sertif%20android%20pemula.png)
