@@ -16,8 +16,3 @@ Informasi pada aplikasi ini bersumber dari wikipedia indonesia https://id.wikipe
 
 # Sertifikat Kelulusan
 ![alt text](https://raw.githubusercontent.com/muhrizky/KhulafaRasyidin/master/sertif%20android%20pemula.png)
-
-# Screenshoot
-![alt text](https://raw.githubusercontent.com/muhrizky/KhulafaRasyidin/master/app/src/main/res/drawable/ss1.png)
-
-![alt text](https://raw.githubusercontent.com/muhrizky/KhulafaRasyidin/master/app/src/main/res/drawable/ss2.png)
